@@ -67,3 +67,5 @@ Promover jogos que provocam emoções, contam boas histórias e desafiam os limi
 ---
 
 > **Desenvolvido com carinho para quem acredita que jogos também são arte.**
+
+🔧 Este projeto foi fortemente influenciado pelo conteúdo do curso "Formação Front-End: HTML, CSS, JavaScript, React e mais" disponível na Udemy. Agradeço aos criadores do curso por fornecerem uma base sólida e acessível para quem está iniciando na área.

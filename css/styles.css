@@ -1,30 +1,44 @@
+:root {
+  --primary-color: #2a6496; /* para a navegação */
+  --secondary-color: #7fdbff; /*  para detalhes */
+  --background-color: #f5f8fa; /* Fundo claro para melhor leitura */
+  --text-color: #313131; /* Para texto principal */
+  --heading-color: #1a4971; /* Para títulos */
+  --accent-color: #ff6b6b; /* Para destaques, como notas de avaliação */
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  background-color: rgb(28, 128, 194);
+  background-color: var(--background-color);
 }
+
 h1,
 h2,
 h3 {
   font-family: "Playfair Display", serif;
+  color: var(--heading-color);
 }
 
 ul {
   list-style: none;
 }
+
 a {
   text-decoration: none;
-  color: #1f1e1e;
+  color: var(--primary-color);
   transition: 0.3s;
 }
+
 a:hover {
-  color: #fffffffd;
+  color: var(--accent-color);
 }
 
 #navbar {
   padding: 1.5rem 2.5rem;
-  border-bottom: 3px solid #8bddfd;
+  border-bottom: 3px solid var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 #navbar-inner {
@@ -33,11 +47,27 @@ a:hover {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: var(--primary-color);
+}
+
+#navbar-inner h2 {
+  background-color: var(--primary-color);
+  color: white;
 }
 
 #nav-links {
   display: flex;
   gap: 2rem;
+  background-color: var(--primary-color);
+}
+
+#nav-links li {
+  background-color: var(--primary-color);
+}
+
+#nav-links a {
+  color: white;
+  background-color: var(--primary-color);
 }
 
 .container {
@@ -48,29 +78,56 @@ a:hover {
   margin: 0 auto;
 }
 
-#posts-container {
+#post-container {
   flex: 3 1 0;
 }
+
 .post {
   margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.post * {
+  background-color: white;
 }
 
 .post img {
   width: 90%;
   margin-bottom: 1rem;
+  border-radius: 8px;
 }
+
 .title,
 .description,
 .author {
   margin-bottom: 1rem;
 }
+
 .title {
   font-size: 2rem;
 }
+
+.title a {
+  color: var(--heading-color);
+}
+
+.title a:hover {
+  color: var(--accent-color);
+}
+
+.description {
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
 .author {
-  color: #333;
+  color: var(--primary-color);
   font-weight: bold;
 }
+
 /* barra lateral */
 #sidebar {
   flex: 1 1 0;
@@ -81,7 +138,9 @@ a:hover {
 #tags {
   padding: 1.5rem;
   margin-bottom: 1rem;
-  border: 1px solid #8bddfd;
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  background-color: white;
 }
 
 #search-bar h4,
@@ -89,52 +148,110 @@ a:hover {
 #tags h4 {
   margin-bottom: 1.5rem;
   font-size: 1.6rem;
+  background-color: white;
 }
+
 #search-bar form {
   display: flex;
+  background-color: white;
 }
+
 #search-bar input {
   padding: 0.5rem;
-  border: 1px solid #8bddfd;
+  border: 1px solid var(--secondary-color);
+  background-color: white;
 }
 
 #search-bar input[type="submit"] {
   cursor: pointer;
-  background-color: #8bddfd;
+  background-color: var(--primary-color);
   color: #fff;
   border: none;
 }
 
 #search-bar input::placeholder {
-  color: rgba(0, 0, 0, 0.5); /* Escurece a mensagem do placeholder */
+  color: rgba(0, 0, 0, 0.5);
 }
 
 #categories li {
   margin-bottom: 2rem;
+  background-color: white;
 }
+
+#categories a {
+  background-color: white;
+}
+
+#categories ul,
+#categories nav {
+  background-color: white;
+}
+
 #tags-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  background-color: white;
 }
 
 #tags-container a {
-  background-color: #8bddfd;
+  background-color: var(--secondary-color);
   padding: 0.5rem 0.7rem;
   border-radius: 0.3rem;
+  color: var(--heading-color);
+}
+
+#tags-container a:hover {
+  background-color: var(--primary-color);
+  color: white;
 }
 
 #footer {
-  border-top: 2px solid #8bddfd;
+  border-top: 2px solid var(--secondary-color);
   padding: 3rem;
   text-align: center;
+  background-color: var(--primary-color);
 }
+
 #footer h2,
-#footer p {
+#footer p,
+#footer .social-links,
+#footer .social-links a,
+#footer .social-links i {
+  background-color: var(--primary-color);
   margin-bottom: 1rem;
+  color: white;
 }
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  font-size: 1.5rem;
+}
+
+.social-links a:hover {
+  color: var(--secondary-color);
+}
+
 @media (max-width: 450px) {
   .container {
     flex-wrap: wrap;
+  }
+
+  #post-container,
+  #sidebar {
+    flex: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  #nav-links {
+    flex-direction: column;
+    gap: 1rem;
   }
 }

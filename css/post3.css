@@ -1,10 +1,10 @@
 :root {
-  --primary-color: #2a6496; /*  navegação */
-  --secondary-color: #7fdbff; /* para detalhes */
+  --primary-color: #2a6496; /* para a navegação */
+  --secondary-color: #7fdbff; /*   para detalhes */
   --background-color: #f5f8fa; /* Fundo claro para melhor leitura */
-  --text-color: #313131; /*texto principal */
-  --heading-color: #1a4971; /* Para títulos */
-  --accent-color: #ff6b6b; /* Para destaques, como notas de avaliação */
+  --text-color: #313131; /*  texto principal */
+  --heading-color: #1a4971; /*  títulos */
+  --accent-color: #ff6b6b; /*  destaques, como notas de avaliação */
 }
 
 * {

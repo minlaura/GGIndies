@@ -329,3 +329,20 @@ footer {
     font-size: 1.4rem;
   }
 }
+@media (max-width: 375px) {
+  body {
+    width: 100%;
+  }
+
+  .comments-section {
+    /* Se a seção de comentários também tiver espaçamento */
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  footer {
+    /* Se o footer também tiver espaçamento */
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
